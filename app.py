@@ -13,7 +13,6 @@ def main():
 
         test_runs = trigger_json.get("runs", [])
 
-        print "Started {} test runs.".format(len(test_runs))
 
         results = {}
         while len(results.keys()) < len(test_runs):
