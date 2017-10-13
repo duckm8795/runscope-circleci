@@ -13,6 +13,7 @@ def main():
 
         test_runs = trigger_json.get("runs", [])
 
+        print "Started {} test runs.".format(len(test_runs))
 
         results = {}
         while len(results.keys()) < len(test_runs):
@@ -29,9 +30,9 @@ def main():
         fail_count = sum([r.get("result") == "fail" for r in results.values()])
 
         if fail_count > 0:
-            
+            print "{} test runs passed. {} test runs failed.".format(pass_count, fail_count)
             exit(1)
-        else:
+
         print "All test runs passed."
 
 
