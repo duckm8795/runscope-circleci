@@ -44,7 +44,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python app.py test
+            python app.py https://api.runscope.com/radar/1ad56d36-7f43-418f-b364-46ac6171d235/trigger?runscope_environment=8a77e0ba-de3e-4443-a339-0029f2259c79
 
       - store_artifacts:
           path: test-reports
