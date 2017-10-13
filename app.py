@@ -31,7 +31,7 @@ def main():
         if fail_count > 0:
             
             exit(1)
-
+        else:
         print "All test runs passed."
 
 
